@@ -31,6 +31,8 @@
       <div class="cake-container">
         <div class="cake" id="cake"></div>
       </div>
+      <br><br>
+      <div id="buttonToBlow" onclick="blowOutCandles()">Click to Blow the Candle</div>
     </div>
 
     <script>
@@ -147,6 +149,7 @@
       }
 
       function blowOutCandles() {
+        document.getElementById("buttonToBlow").style.display = "none";
         const candles = document.querySelectorAll(".candle");
         candles.forEach((candle) => {
           const delay = Math.random() * 1000;
